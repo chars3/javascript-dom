@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Criando elementos</title>
+</head>
+<body>
+    <h1 id="title">Titulo</h1>
+    <h2 class="title2">Segundo título</h2>
+
+    <p id="paragrafo">Este é um paragrafo</p>
+
+    <div id="container">
+
+    </div>
+
+    <script>
+        //Primeiro criamos o elemento no qual queremos inserir um texto
+        var novoParagrafo = document.createElement('p')
+
+        //Em seguiida criamos o texto (considerado como nó de texto no JS)
+        var texto = document.createTextNode('este é o conteúdo do parágrafo')
+
+        //Inserimos o texto no elemnto que foi criado
+        novoParagrafo.appendChild(texto)
+
+        //Selecionamos o  elemento para poder inserir o conteúdo que havíamos criado
+        var body = document.querySelector('body')
+
+        //Inserimos o conteúdo no body
+        body.appendChild(novoParagrafo)
+
+        //=============== || ===================
+        //inserir em um container:
+
+        //Selecionamos o container
+        var container = document.getElementById('container')
+
+        //criamos o elemento
+        var el = document.createElement('span')
+        //inserimos o texto no span
+        el.appendChild(document.createTextNode('texto do span'))
+        container.appendChild(el)
+    </script>
+</body>
+</html>

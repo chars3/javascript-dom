@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alterar conteúdo</title>
+</head>
+<body>
+    <h1 id="title">Titulo</h1>
+    <h2 class="title2">Segundo título</h2>
+
+    <p id="paragrafo">Este é um paratgrafo</p>
+
+    <ul id="lista">
+        <li class="item">Item 1</li>
+        <li class="item">Item 2</li>
+        <li class="item">Item 3</li>
+    </ul>
+
+    <script>
+        //Primeiro selecionamos o elemento  que queremos alterar
+        var title = document.querySelector('#title')
+        console.log(title)
+
+        //Métodos:
+        //innerHTML
+        title.innerHTML = 'testando o texto alterado'
+
+        //textContent -> mais utilizado e performático
+        var title2 = document.querySelector('.title2')
+        console.log(title2)
+        title2.textContent = 'testando o text content'
+    </script>
+</body>
+</html>

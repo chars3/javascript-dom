@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alterando atibutos</title>
+</head>
+<body>
+    <h1 id="title">Titulo</h1>
+    <h2 class="title2">Segundo título</h2>
+
+    <p id="paragrafo">Este é um paragrafo</p>
+
+    <div id="container">
+        <p>testando</p>
+    </div>
+
+    <button id="btn">teste</button>
+
+    <script>
+        //adicionar atributo
+        var title = document.querySelector('#title')
+
+        //primeiro definimos o tipo do atributo e em seguida o nome: class="testando-atributo"
+        title.setAttribute('class', 'testando-atributo')
+        console.log(title)
+
+        var btn = document.querySelector('#btn')
+        btn.setAttribute('disabled', 'desabilitado')
+
+        //remover atributo
+        var p = document.querySelector('#paragrafo')
+        p.removeAttribute('id')
+        console.log(p)
+    </script>
+</body>
+</html>

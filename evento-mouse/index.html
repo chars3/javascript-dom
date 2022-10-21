@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .hide {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <h1 id="title">Titulo</h1>
+    <h2 class="title2">Segundo título</h2>
+
+    <p id="paragrafo">Este é um paragrafo</p>
+
+    <div id="container">
+        <p>testando</p>
+    </div>
+
+    <button id="btn">teste</button>
+
+    <script>
+        var btn = document.querySelector('#btn')
+        btn.addEventListener('mouseover', () => {
+            var titulo2 = document.querySelector('.title2')
+            //Quando passarmos o moude em cima do botão o titulo 2 é escondido
+            titulo2.classList.add('hide')
+        })
+    </script>
+</body>
+</html>

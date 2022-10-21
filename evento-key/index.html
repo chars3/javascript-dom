@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .change {
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <h1 id="title">Titulo</h1>
+    <h2 class="title2">Segundo título</h2>
+
+    <p id="paragrafo">Este é um paragrafo</p>
+
+    <div id="container">
+        <p>testando</p>
+    </div>
+
+    <button id="btn">teste</button>
+
+    <script>
+        document.addEventListener('keydown', (event) => {
+            //console.log(event.key)
+            var title = document.querySelector('#title')
+
+            if(event.key === 'Enter') {
+                console.log('apertou Enter')
+                //Quando apertar a tecla Enter será aplicado a classe .change
+                //que mudará a cor do título
+                title.classList.add('change')
+            }
+        })
+    </script>
+</body>
+</html>
